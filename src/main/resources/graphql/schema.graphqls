@@ -1,0 +1,10 @@
+type Query{
+	listarCuentas : [CuentaBancaria]
+}
+type CuentaBancaria{
+	id: String
+	fechaCreacion: Float,
+	balance: Float,
+	divisa: String,
+	tipoCuenta: String
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.0.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>Graphql_SpringData_REST</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Graphql_SpringData_REST</name>
+	<description/>
+	<url/>
+	<!--
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	-->
+	<licenses>
+		<license/>
+	</licenses>
+	<!--
+	<developers>
+		<developer>
+			<id>tuUsuario</id>
+			<name>Tu Nombre Completo</name>
+			<email>tu.email@example.com</email>
+			<url>https://github.com/tuUsuario</url>
+			<roles>
+				<role>Project Lead</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>America/Mexico_City</timezone>
+		</developer>
+	</developers>
+	-->
+	<developers>
+		<developer/>
+	</developers>
+	<!--
+	<scm>
+		<connection>scm:git:https://github.com/usuario/repo.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/usuario/repo.git</developerConnection>
+		<url>https://github.com/usuario/repo</url>
+	</scm>
+	-->
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-h2console</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-graphql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-graphql-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Dependencia de Lombok: librería que genera getters, setters, constructores y más mediante anotaciones -->
+		<dependency>
+			<!-- GroupId: organización que mantiene la librería -->
+			<groupId>org.projectlombok</groupId>
+			<!-- ArtifactId: nombre del artefacto/librería -->
+			<artifactId>lombok</artifactId>
+			<!-- Version: versión específica de Lombok a usar -->
+			<!-- Scope provided: solo se necesita en tiempo de compilación, no en runtime -->
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<!-- Configuración de plugins de Maven -->
+	<build>
+		<!-- Lista de plugins a usar durante la construcción del proyecto -->
+		<plugins>
+			<!-- Plugin del compilador de Maven: configuración del compilador Java -->
+			<plugin>
+				<!-- GroupId: organización del plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<!-- ArtifactId: nombre del plugin -->
+				<artifactId>maven-compiler-plugin</artifactId>
+				<!-- Configuración específica del plugin -->
+				<configuration>
+					<!-- annotationProcessorPaths: ruta hacia los procesadores de anotaciones (incluyendo Lombok) -->
+					<annotationProcessorPaths>
+						<!-- Definición del procesador de anotaciones de Lombok -->
+						<path>
+							<!-- GroupId del procesador -->
+							<groupId>org.projectlombok</groupId>
+							<!-- ArtifactId del procesador -->
+							<artifactId>lombok</artifactId>
+							<!-- Versión del procesador (debe coincidir con la dependencia) -->
+							<version>1.18.38</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
